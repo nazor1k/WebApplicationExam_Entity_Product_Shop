@@ -1,0 +1,16 @@
+﻿@model List<Product>
+
+
+@foreach (var item in Model)
+{
+<div class="col">
+		@Html.Partial("_ProductPartial", item)
+</div>
+}
+
+
+
+
+
+
+

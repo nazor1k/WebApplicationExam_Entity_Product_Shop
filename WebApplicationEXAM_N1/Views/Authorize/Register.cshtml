@@ -1,0 +1,54 @@
+﻿
+@{
+	ViewData["Title"] = "LSD Shop - Реєстрація";
+}
+
+
+<div class="card p-4" style="width: 400px; margin: auto;">
+    <h4 class="text-start">Реєстрація</h4>
+    <hr>
+
+    <form method="post" action="/Authorize/UserRegister">
+        <div class="mb-3">
+            <label class="form-label">Логін<span class="text-danger">*</span></label>
+            <input type="text" name="login" placeholder="Login" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Ім'я<span class="text-danger">*</span></label>
+            <input type="text" name="name" placeholder="Username" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Електронна пошта<span class="text-danger">*</span></label>
+            <input type="email" name="email" placeholder="Email" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Пароль<span class="text-danger">*</span></label>
+            <input type="password" name="password" placeholder="Password" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Повторіть пароль<span class="text-danger">*</span></label>
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Роль<span class="text-danger">*</span></label>
+            <select name="isAdmin" class="form-control" required>
+                <option  value="false" selected>Користувач</option>
+                <option value="true">Адмін</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Зареєструватися</button>
+    </form>
+
+    <p class="text-center mt-3">
+        Вже маєте акаунт?
+        <a href="/Authorize/Index" class="text-primary">Увійти</a>
+    </p>
+</div>
+
+

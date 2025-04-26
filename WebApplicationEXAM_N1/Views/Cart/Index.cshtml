@@ -1,0 +1,22 @@
+﻿@{
+
+	ViewData["Title"] = "LSD Shop - Корзина";
+}
+
+
+@model List<Product>
+
+
+
+<div class=" rounded border p-2 d-flex flex-row w-100">
+
+
+    <div class="flex-grow-1 ">
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3  row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-2" id="products-container">
+            @Html.Partial("_ProductsListPartial", Model)
+        </div>
+    </div>
+
+
+
+</div>

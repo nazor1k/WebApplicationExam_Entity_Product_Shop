@@ -1,0 +1,32 @@
+﻿@model Product
+
+
+<div class="card shadow-sm h-100" id="product-@Model.Id">
+
+    <div class="position-absolute top-0 end-0 p-2">
+        <a href="/Cart/DeleteFromCart?userToProductId=@Model.Id" class="btn btn-danger btn-sm">
+            <i class="bi bi-trash"></i>
+        </a>
+    </div>
+
+    <img src="@Model.Thumbnail" class="card-img-top" alt="@Model.Title">
+
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <span class="badge bg-secondary mb-2">@Model.Category</span>
+        <p class="card-text">@Model.Description</p>
+    </div>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex align-items-center justify-content-between">
+            <span>Рейтинг:</span> <span>@Model.Rating</span>
+        </li>
+        <li class="list-group-item d-flex align-items-center justify-content-between">
+            <span>Ціна:</span> <span class="text-success">$@Model.Price</span>
+        </li>
+        <li class="list-group-item d-flex align-items-center justify-content-between">
+            <span>Кількість у кошику:</span> <span>@Model.Quantity шт.</span>
+        </li>
+    </ul>
+
+</div>

@@ -1,0 +1,28 @@
+﻿
+@{
+	ViewData["Title"] = "Вхід";
+	
+}
+
+<div class="card p-4 " style="width: 400px; margin: auto;">
+    <h4 class="text-start">Вхід</h4>
+    <hr>
+
+    <form method="post" action="/Authorize/Login">
+        <div class="mb-3">
+            <label class="form-label">Логін<span class="text-danger">*</span></label>
+            <input type="text" name="login" placeholder="Username" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Пароль<span class="text-danger">*</span></label>
+            <input type="password" name="password" placeholder="Password" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Увійти</button>
+    </form>
+
+    <p class="text-center mt-3">
+        Не маєте акаунту?
+        <a href="/Authorize/Register" class="text-primary">Зареєструватися</a>
+    </p>
+</div>
+

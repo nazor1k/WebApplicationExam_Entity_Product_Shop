@@ -6,11 +6,11 @@
         public string Name { get; set; }
         public string Email { get; set; }
 
-        public string Login { get; set; }
-        public string PasswordHash { get; set; }
-
+        public int UserDataId { get; set; }
+        public UserData UserData { get; set; }
         public UserRole Role { get; set; }
-
         public List<UserToProduct> UserToProducts { get; set; }
     }
+
+    
 }
